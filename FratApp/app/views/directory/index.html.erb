@@ -11,15 +11,17 @@
     <!-- Navbar -->
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Triangle Fraternity</a>
+        <a href="/" class="brand-logo">Triangle Fraternity</a>
       </div>
     </nav>
 
     <!-- Content -->
     <div class="container">
-        <h1>Welcome Home</h1>
-        <p>Links to other pages that should go in the navbar or something</p>
-        <ul>
-            <li><%= link_to "Brother Directory", directory_path %>
+        <!-- Display info from each brother -->
+        <% @brothers.each do |bro| %>
+        <div class="dir-item">
+            <p> Brother: <%= bro.name %> <%= bro.initials %> </p>
+        </div>
+        <% end %>
     </div>
 </body>
