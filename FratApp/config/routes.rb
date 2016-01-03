@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
     root 'home_page#index'
     get '/directory' => 'directory#index'
+    get '/daily_jobs' => 'daily_jobs#index'
     
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

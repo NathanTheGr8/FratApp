@@ -1,0 +1,37 @@
+<head>
+    <title>Triangle Fraternity</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Triangle Fraternity</a>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Display info from each brother -->
+        <h2>Daily Jobs</h2>
+        <% @brothers.each do |bro| %>
+        <div class="dir-item">
+            <p> Brother: <%= bro.name %> <%= bro.initials %> </p>
+        </div>
+        <% end %>
+
+        <% @chores.each do |chore| %>
+        <div class="dir-item">
+            <p> Chore: <%= chore.id %> <%= chore.name %> <%= chore.description %>  </p>
+            <% chore.chore_assignments.each do |ca| %>
+                <p> \t Chore Assignment: <%= ca.chore_id %> <%= ca.brother_id %> <%= ca.bro_assigned %> <%= ca.bro_did %></p>
+            <% end %>
+        </div>
+        <% end %>
+    </div>
+</body>
