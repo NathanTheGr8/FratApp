@@ -1,0 +1,27 @@
+<head>
+    <title>Triangle Fraternity</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Triangle Fraternity</a>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Display info from each brother -->
+        <h2>Daily Jobs: Chore <%= @chore.id %> </h2>
+        <p><%= @chore.name %></p>
+        <p><%= @chore.description %></p>
+        <%= link_to "Go Back", daily_jobs_path %>
+
+    </div>
+</body>

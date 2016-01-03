@@ -33,7 +33,7 @@
               <tr>
                   <td><%= bro.initials %></td>
                   <td> <% bro.chore_assignments.each do |ca| %>
-                       <%= ca.chore_id %>
+                       <%= link_to ca.chore_id, show_chore_path(ca.chore_id) %>
                        <% end %>
                    </td>
               </tr>
