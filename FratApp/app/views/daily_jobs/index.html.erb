@@ -19,19 +19,26 @@
     <div class="container">
         <!-- Display info from each brother -->
         <h2>Daily Jobs</h2>
-        <% @brothers.each do |bro| %>
-        <div class="dir-item">
-            <p> Brother: <%= bro.name %> <%= bro.initials %> </p>
-        </div>
-        <% end %>
 
-        <% @chores.each do |chore| %>
-        <div class="dir-item">
-            <p> Chore: <%= chore.id %> <%= chore.name %> <%= chore.description %>  </p>
-            <% chore.chore_assignments.each do |ca| %>
-                <p> \t Chore Assignment: <%= ca.chore_id %> <%= ca.brother_id %> <%= ca.bro_assigned %> <%= ca.bro_did %></p>
-            <% end %>
-        </div>
-        <% end %>
+        <table class="striped">
+          <thead>
+            <tr>
+                <th data-field="id">Brother Initials</th>
+                <th data-field="name">Chore Assignment</th>
+            </tr>
+          </thead>
+
+          <tbody>
+              <% @brothers.each do |bro| %>
+              <tr>
+                  <td><%= bro.initials %></td>
+                  <td> <% bro.chore_assignments.each do |ca| %>
+                       <%= ca.chore_id %>
+                       <% end %>
+                   </td>
+              </tr>
+              <% end %>
+          </tbody>
+        </table>
     </div>
 </body>
