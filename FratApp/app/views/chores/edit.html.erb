@@ -17,14 +17,14 @@
 
     <!-- Content -->
     <div class="container">
-        <!-- Display info from each brother -->
-        <h2>Brother Directory</h2>
-        <% @brothers.each do |bro| %>
-        <div class="dir-item">
-            <p> Brother: <%= bro.name %> <%= bro.initials %> </p>
-        </div>
+        <h2>Daily Jobs: Chore <%= @chore.id %> </h2>
+        <%= form_for(@chore) do |chore| %>
+        <%= chore.text_field :name, value: "#{@chore.name}", placeholder: 'Name' %>
+        <%= chore.text_area :description, value: "#{@chore.description}", placeholder: 'Description', class: 'materialize-textarea' %>
+        <%= chore.submit "Update", class: 'waves-effect waves-light btn' %>
         <% end %>
-
-        <%= link_to "Add Brother", new_brother_path %>
+        <br/>
+        <br/>
+        <%= link_to "Delete Chore", @chore, method: :delete, class: 'waves-effect waves-light btn red', data: { confirm: "Are you sure you want to delete chore, #{@chore.name}?" } %>
     </div>
 </body>

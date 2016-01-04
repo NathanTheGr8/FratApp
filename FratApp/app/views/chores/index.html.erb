@@ -33,7 +33,7 @@
               <tr>
                   <td><%= bro.initials %></td>
                   <td> <% bro.chore_assignments.each do |ca| %>
-                       <%= link_to ca.chore_id, show_chore_path(ca.chore_id) %>
+                       <%= link_to Chore.find(ca.chore_id).name, chore_path(ca.chore_id) %>,
                        <% end %>
                    </td>
               </tr>
@@ -41,5 +41,10 @@
           </tbody>
         </table>
 
+        <h3>Chores</h3>
+        <% @chores.each do |chore| %>
+        <p> <%= "#{chore.name}: #{chore.description}" %> <%= link_to "View Chore", chore_path(chore.id) %></p>
+        <% end %>
+        <%= link_to "Add Chore", new_chore_path, class: 'waves-effect waves-light btn' %>
     </div>
 </body>

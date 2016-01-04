@@ -18,10 +18,11 @@
     <!-- Content -->
     <div class="container">
         <!-- Display info from each brother -->
-        <h2>Daily Jobs: Chore <%= @chore.id %> </h2>
-        <p><%= @chore.name %></p>
-        <p><%= @chore.description %></p>
-        <%= link_to "Go Back", daily_jobs_path %>
-
+        <h2>Daily Jobs: New Chore</h2>
+        <%= form_for(@chore) do |chore| %>
+        <%= chore.text_field :name, placeholder: 'Name' %>
+        <%= chore.text_area :description, placeholder: 'Description', class: 'materialize-textarea' %>
+        <%= chore.submit "Create New Chore", class: 'waves-effect waves-light btn' %>
+        <% end %>
     </div>
 </body>

@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
     root 'home_page#index'
-    get '/directory' => 'directory#index', as: :brothers
-    get '/directory/new' => 'directory#new', as: :new_brother
-    post 'directory' => 'directory#create'
-    get '/daily_jobs' => 'daily_jobs#index'
-    get '/daily_jobs/:id' => 'daily_jobs#show', as: :show_chore
+    resources :brothers
+    resources :chores
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

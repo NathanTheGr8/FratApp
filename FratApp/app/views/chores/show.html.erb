@@ -11,17 +11,19 @@
     <!-- Navbar -->
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Triangle Fraternity</a>
+        <a href="/" class="brand-logo">Triangle Fraternity</a>
       </div>
     </nav>
 
     <!-- Content -->
     <div class="container">
-        <h1>Welcome Home</h1>
-        <p>Links to other pages that should go in the navbar or something</p>
-        <ul>
-            <li><%= link_to "Brother Directory", brothers_path %></li>
-            <li><%= link_to "DJ Assignments", chores_path %></li>
-        </ul>
+        <!-- Display info from each brother -->
+        <h2>Daily Jobs: Chore <%= @chore.id %> </h2>
+        <p><%= @chore.name %></p>
+        <p><%= @chore.description %></p>
+        <%= link_to "Go Back", chores_path, class: 'waves-effect waves-light btn' %>
+        <br/>
+        <br/>
+        <%= link_to "Edit Chore", edit_chore_path, class: 'waves-effect waves-light btn orange' %>
     </div>
 </body>
