@@ -1,0 +1,32 @@
+<head>
+    <title>Triangle Fraternity</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Triangle Fraternity</a>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Display info from each brother -->
+        <h2>Brother Directory: Create New Brother</h2>
+        <%= form_for(@brother) do |b| %>
+            <%= b.text_field :name, placeholder: "Name", class: 'input-field validate' %>
+            <%= b.text_field :initials, placeholder: "Initials", class: 'input-field validate' %>
+            <%= b.text_field :pledge_class, placeholder: "Pledge Class", class: 'input-field validate' %>
+            <%= b.text_field :major, placeholder: "Major", class: 'input-field validate' %>
+            <%= b.text_field :grad_year, placeholder: "Graduation Year", class: 'input-field validate' %>
+            <%= b.text_field :phone, placeholder: "Phone Number", class: 'input-field validate' %>
+            <%= b.submit "Create", class: 'waves-effect waves-light btn' %>
+        <% end %>
+    </div>
+</body>
