@@ -15,6 +15,7 @@
               <div class="nav-wrapper">
                   <a href="#" class="brand-logo">Triangle Fraternity</a>
                   <ul id="nav-mobile" class="right table-of-contents hide-on-med-and-down">
+                      <li><a href="#about">About</a></li>
                       <li><a href="#members">Members</a></li>
                       <li><a href="#events">Events</a></li>
                       <li><a href="#projects">Projects</a></li>
@@ -27,6 +28,7 @@
 
         <!-- Content -->
         <img src="http://illinoistriangle.com/img/composite.jpg" class="responsive-img"/>
+
         <section id="develop" class="section scrollspy container">
             <h1>Welcome to Development HomePage</h1>
             <p>Links to controllers and others</p>
@@ -34,6 +36,15 @@
                 <li><%= link_to "Brother Directory", brothers_path %></li>
                 <li><%= link_to "DJ Assignments", chores_path %></li>
             </ul>
+        </section>
+
+        <section id="about" style="background-size: cover; background-image: url('http://illinoistriangle.com/img/houseLight2.jpg')" class="section scrollspy">
+            <div class="container">
+                <h2 class="center-align">About Triangle</h2>
+
+                <p>For over 100 years, Triangle Fraternity has provided an environment which fosters personal growth and professional success. Triangle is a brotherhood where undergraduates in engineering, architecture and science can develop long-lasting friendships and connections with a nationwide network of alumni.</p>
+                <p>Triangle is active in both the Illinois and Greek community. With the University, we participate as Engineering Council representatives, compete in the EOH Robot Competition, and host dinners with U of I professors. In the Greek community, we host social exchanges with sororities and women's groups on campus, have brotherhood events for our membership, and spearhead philanthropy efforts all throughout the year.</p>
+            </div>
         </section>
 
         <section id="members" class="section scrollspy container">
@@ -47,8 +58,55 @@
             <br/>
         </section>
 
-        <section id="events" class="section scrollspy container">
-            <p>Introduction</p>
+        <section id="events" class="section scrollspy">
+            <h2 class="center-align">Spring 2015 Rush Events</h2>
+            <!-- Card Rows -->
+            <% 3.times do |a| %>
+            <div class="row">
+                <div class="col s4">
+                    <div class="rush-card">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="http://illinoistriangle.com/img/rush/dodgeball.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title grey-text text-darken-4">Dodgeball</span>
+                              <p>Join us for dodgeball at the ARC. If the weather is right we might play broomball on our homemade icerink too.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s4">
+                    <div class="rush-card">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="http://illinoistriangle.com/img/rush/dodgeball.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title grey-text text-darken-4">Dodgeball</span>
+                              <p>Join us for dodgeball at the ARC. If the weather is right we might play broomball on our homemade icerink too.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s4">
+                    <div class="rush-card">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="http://illinoistriangle.com/img/rush/dodgeball.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title grey-text text-darken-4">Dodgeball</span>
+                              <p>Join us for dodgeball at the ARC. If the weather is right we might play broomball on our homemade icerink too.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+
             <br/>
             <br/>
             <br/>
