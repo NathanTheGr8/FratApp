@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>User</h2>
+    <p>Name: <%= "#{@user.first_name} #{@user.last_name}"%></p>
+    <p>Email: <%= "#{@user.email}"%></p>
+    <% if @user.role == nil %>
+    <p>Role: Standard User</p>
+    <% else %>
+    <p>Role: <%= "#{@user.role}"%></p>
+    <% end %>
+    <%= link_to "Logout", logout_path, method: :delete, class: "waves-effect waves-light btn"%>
+</div>

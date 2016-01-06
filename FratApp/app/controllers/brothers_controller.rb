@@ -1,4 +1,6 @@
 class BrothersController < ApplicationController
+    before_action :require_user, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+
     def index
         @brothers = Brother.all
     end

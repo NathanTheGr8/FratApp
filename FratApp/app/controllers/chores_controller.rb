@@ -1,4 +1,6 @@
 class ChoresController < ApplicationController
+    before_action :require_user, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+
     def index
         @chores = Chore.all
         @brothers = Brother.all
