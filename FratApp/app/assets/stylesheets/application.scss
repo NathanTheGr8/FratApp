@@ -20,3 +20,12 @@ footer.oldrose-background, nav.oldrose-background {
 p.indent {
     text-indent: 50px;
 }
+
+div.overlay {
+   background:transparent;
+   position:relative;
+   width:480px;
+   height:360px; /* your iframe height */
+   top:360px;  /* your iframe height */
+   margin-top:-360px;  /* your iframe height */
+}
