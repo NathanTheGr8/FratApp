@@ -32,11 +32,19 @@
                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Develop Menu<i class="material-icons right">arrow_drop_down</i></a></li>
                    </ul>
                   <ul id="nav-mobile" class="right table-of-contents hide-on-med-and-down">
+                      <% if( controller_name == 'home_page')%>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#members">Members</a></li>
+                      <li><a href="#events">Events</a></li>
+                      <li><a href="#involvement">Involvement</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                      <% else %>
                       <li><a href="/#about">About</a></li>
                       <li><a href="/#members">Members</a></li>
                       <li><a href="/#events">Events</a></li>
                       <li><a href="/#involvement">Involvement</a></li>
                       <li><a href="/#contact">Contact</a></li>
+                      <% end %>
                  </ul>
                 </div>
               </div>
