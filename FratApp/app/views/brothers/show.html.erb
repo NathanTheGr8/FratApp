@@ -1,58 +1,41 @@
-<head>
-    <title>Triangle Fraternity</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-
-</head>
-<body>
-    <!-- Navbar -->
-    <nav>
-      <div class="nav-wrapper">
-          <a href="/" class="brand-logo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Return to Home Page">Triangle Fraternity</a>
-      </div>
-    </nav>
-
-    <!-- Content -->
-    <div class="container">
-        <h2>Brother Directory:</h2>
-        <h4>Brother <%= @brother.name %></h4>
-        <table class="striped">
-            <thead>
-                <tr>
-                    <th>Fields</th>
-                    <th>Brother Info</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Name</td>
-                    <td><%= @brother.name %></td>
-                </tr>
-                <tr>
-                    <td>Initials
-                    <td><%= @brother.initials %></td>
-                </tr>
-                <tr>
-                    <td>Pledge Class </td>
-                    <td><%= @brother.pledge_class %></td>
-                </tr>
-                <tr>
-                    <td>Major</td>
-                    <td><%= @brother.major %></td>
-                </tr>
-                <tr>
-                    <td>Graduation Year</td>
-                    <td><%= @brother.grad_year %></td>
-                </tr>
-                <tr>
-                    <td>Phone</td>
-                    <td><%= @brother.phone %></td>
-                </tr>
-            </tbody>
-        </table>
-        <br/>
-        <%= link_to 'Edit',  edit_brother_path(@brother.id), class: 'waves-effect waves-light btn orange' %>
-</body>
+<!-- Content -->
+<div class="container">
+    <h2>Brother Directory:</h2>
+    <h4>Brother <%= @brother.name %></h4>
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Fields</th>
+                <th>Brother Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td><%= @brother.name %></td>
+            </tr>
+            <tr>
+                <td>Initials
+                <td><%= @brother.initials %></td>
+            </tr>
+            <tr>
+                <td>Pledge Class </td>
+                <td><%= @brother.pledge_class %></td>
+            </tr>
+            <tr>
+                <td>Major</td>
+                <td><%= @brother.major %></td>
+            </tr>
+            <tr>
+                <td>Graduation Year</td>
+                <td><%= @brother.grad_year %></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><%= @brother.phone %></td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <%= link_to 'Edit',  edit_brother_path(@brother.id), class: 'waves-effect waves-light btn orange' %>
+</div>

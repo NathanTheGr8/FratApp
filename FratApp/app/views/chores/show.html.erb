@@ -1,28 +1,10 @@
-<head>
-    <title>Triangle Fraternity</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-
-</head>
-<body>
-    <!-- Navbar -->
-    <nav>
-      <div class="nav-wrapper">
-          <a href="/" class="brand-logo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Return to Home Page">Triangle Fraternity</a>
-      </div>
-    </nav>
-
-    <!-- Content -->
-    <div class="container">
-        <h2>Daily Jobs: Chore <%= @chore.id %> </h2>
-        <p><%= @chore.name %></p>
-        <p><%= @chore.description %></p>
-        <%= link_to "Go Back", chores_path, class: 'waves-effect waves-light btn' %>
-        <br/>
-        <br/>
-        <%= link_to "Edit Chore", edit_chore_path, class: 'waves-effect waves-light btn orange' %>
-    </div>
-</body>
+<!-- Content -->
+<div class="container">
+    <h2>Daily Jobs: Chore <%= @chore.id %> </h2>
+    <p><%= @chore.name %></p>
+    <p><%= @chore.description %></p>
+    <%= link_to "Go Back", chores_path, class: 'waves-effect waves-light btn' %>
+    <br/>
+    <br/>
+    <%= link_to "Edit Chore", edit_chore_path, class: 'waves-effect waves-light btn orange' %>
+</div>

@@ -1,45 +1,27 @@
-<head>
-    <title>Triangle Fraternity</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-
-</head>
-<body>
-    <!-- Navbar -->
-    <nav>
-      <div class="nav-wrapper">
-          <a href="/" class="brand-logo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Return to Home Page">Triangle Fraternity</a>
-      </div>
-    </nav>
-
-    <!-- Content -->
-    <div class="container">
-        <!-- Display info from each brother -->
-        <h2>Brother Directory</h2>
-        <table class='striped'>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Initials</th>
-                    <th>Pledge Class</th>
-                    <th>Edit Brother</th>
-                </tr>
-            </thead>
-            <tbody>
-            <% @brothers.each do |bro| %>
-                <tr>
-                    <td> <%= link_to bro.name, brother_path(bro.id) %> </td>
-                    <td> <%= bro.initials %> </td>
-                    <td> <%= bro.pledge_class %> </td>
-                    <td> <%= link_to "Edit", edit_brother_path(bro.id) %> </td>
-                </tr>
-            <% end %>
-            </tbody>
-        </table>
-        <br/>
-        <%= link_to "Add Brother", new_brother_path, class: 'waves-effect waves-light btn' %>
-    </div>
-</body>
+<!-- Content -->
+<div class="container">
+    <!-- Display info from each brother -->
+    <h2>Brother Directory</h2>
+    <table class='striped'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Initials</th>
+                <th>Pledge Class</th>
+                <th>Edit Brother</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @brothers.each do |bro| %>
+            <tr>
+                <td> <%= link_to bro.name, brother_path(bro.id) %> </td>
+                <td> <%= bro.initials %> </td>
+                <td> <%= bro.pledge_class %> </td>
+                <td> <%= link_to "Edit", edit_brother_path(bro.id) %> </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+    <br/>
+    <%= link_to "Add Brother", new_brother_path, class: 'waves-effect waves-light btn' %>
+</div>

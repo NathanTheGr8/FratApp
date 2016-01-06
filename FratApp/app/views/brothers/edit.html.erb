@@ -1,35 +1,17 @@
-<head>
-    <title>Triangle Fraternity</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-
-</head>
-<body>
-    <!-- Navbar -->
-    <nav>
-      <div class="nav-wrapper">
-          <a href="/" class="brand-logo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Return to Home Page">Triangle Fraternity</a>
-      </div>
-    </nav>
-
-    <!-- Content -->
-    <div class="container">
-        <!-- Display info from brother with fields to change -->
-        <h2>Brother Directory:</h2>
-        <h4>Update Brother <%= @brother.name %></h4>
-        <%= form_for(@brother) do |b| %>
-            <%= b.text_field :name, value: @brother.name, placeholder: "Name", class: 'input-field' %>
-            <%= b.text_field :initials, value: @brother.initials, placeholder: "Initials", class: 'input-field' %>
-            <%= b.text_field :pledge_class, value: @brother.pledge_class, placeholder: "Pledge Class", class: 'input-field' %>
-            <%= b.text_field :major, value: @brother.major, placeholder: "Major", class: 'input-field validate' %>
-            <%= b.text_field :grad_year, value: @brother.grad_year, placeholder: "Graduation Year", class: 'input-field' %>
-            <%= b.text_field :phone, value: @brother.phone, placeholder: "Phone Number", class: 'input-field' %>
-            <%= b.submit "Update", class: 'waves-effect waves-light btn' %>
-        <% end %>
-        <br/>
-        <%= link_to 'Destroy',  @brother,  method: :delete, class: 'waves-effect waves-light btn red', data: { confirm: "Are you sure you want to delete #{@brother.name}?" } %>
-    </div>
-</body>
+<!-- Content -->
+<div class="container">
+    <!-- Display info from brother with fields to change -->
+    <h2>Brother Directory:</h2>
+    <h4>Update Brother <%= @brother.name %></h4>
+    <%= form_for(@brother) do |b| %>
+        <%= b.text_field :name, value: @brother.name, placeholder: "Name", class: 'input-field' %>
+        <%= b.text_field :initials, value: @brother.initials, placeholder: "Initials", class: 'input-field' %>
+        <%= b.text_field :pledge_class, value: @brother.pledge_class, placeholder: "Pledge Class", class: 'input-field' %>
+        <%= b.text_field :major, value: @brother.major, placeholder: "Major", class: 'input-field validate' %>
+        <%= b.text_field :grad_year, value: @brother.grad_year, placeholder: "Graduation Year", class: 'input-field' %>
+        <%= b.text_field :phone, value: @brother.phone, placeholder: "Phone Number", class: 'input-field' %>
+        <%= b.submit "Update", class: 'waves-effect waves-light btn' %>
+    <% end %>
+    <br/>
+    <%= link_to 'Destroy',  @brother,  method: :delete, class: 'waves-effect waves-light btn red', data: { confirm: "Are you sure you want to delete #{@brother.name}?" } %>
+</div>

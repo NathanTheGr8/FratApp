@@ -45,3 +45,5 @@ group :development do
   gem 'spring'
 end
 
+# Material UI
+gem 'materialize-sass'

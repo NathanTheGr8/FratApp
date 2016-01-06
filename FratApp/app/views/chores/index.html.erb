@@ -1,40 +1,31 @@
-<body>
-    <!-- Navbar -->
-    <nav>
-      <div class="nav-wrapper">
-        <a href="/" class="brand-logo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Return to Home Page">Triangle Fraternity</a>
-      </div>
-    </nav>
+<!-- Content -->
+<div class="container">
+    <h2>Daily Jobs</h2>
 
-    <!-- Content -->
-    <div class="container">
-        <h2>Daily Jobs</h2>
+    <table class="striped">
+      <thead>
+        <tr>
+            <th data-field="id">Brother Initials</th>
+            <th data-field="name">Chore Assignment</th>
+        </tr>
+      </thead>
 
-        <table class="striped">
-          <thead>
-            <tr>
-                <th data-field="id">Brother Initials</th>
-                <th data-field="name">Chore Assignment</th>
-            </tr>
-          </thead>
+      <tbody>
+          <% @brothers.each do |bro| %>
+          <tr>
+              <td><%= bro.initials %></td>
+              <td> <% bro.chore_assignments.each do |ca| %>
+                   <%= link_to Chore.find(ca.chore_id).name, chore_path(ca.chore_id) %>,
+                   <% end %>
+               </td>
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
 
-          <tbody>
-              <% @brothers.each do |bro| %>
-              <tr>
-                  <td><%= bro.initials %></td>
-                  <td> <% bro.chore_assignments.each do |ca| %>
-                       <%= link_to Chore.find(ca.chore_id).name, chore_path(ca.chore_id) %>,
-                       <% end %>
-                   </td>
-              </tr>
-              <% end %>
-          </tbody>
-        </table>
-
-        <h3>Chores</h3>
-        <% @chores.each do |chore| %>
-        <p> <%= "#{chore.name}: #{chore.description}" %> <%= link_to "View Chore", chore_path(chore.id) %></p>
-        <% end %>
-        <%= link_to "Add Chore", new_chore_path, class: 'waves-effect waves-light btn' %>
-    </div>
-</body>
+    <h3>Chores</h3>
+    <% @chores.each do |chore| %>
+    <p> <%= "#{chore.name}: #{chore.description}" %> <%= link_to "View Chore", chore_path(chore.id) %></p>
+    <% end %>
+    <%= link_to "Add Chore", new_chore_path, class: 'waves-effect waves-light btn' %>
+</div>

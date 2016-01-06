@@ -1,27 +1,9 @@
-<head>
-    <title>Triangle Fraternity</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-
-</head>
-<body>
-    <!-- Navbar -->
-    <nav>
-      <div class="nav-wrapper">
-          <a href="/" class="brand-logo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Return to Home Page">Triangle Fraternity</a>
-      </div>
-    </nav>
-
-    <!-- Content -->
-    <div class="container">
-        <h2>Daily Jobs: New Chore</h2>
-        <%= form_for(@chore) do |chore| %>
-        <%= chore.text_field :name, placeholder: 'Name' %>
-        <%= chore.text_area :description, placeholder: 'Description', class: 'materialize-textarea' %>
-        <%= chore.submit "Create New Chore", class: 'waves-effect waves-light btn' %>
-        <% end %>
-    </div>
-</body>
+<!-- Content -->
+<div class="container">
+    <h2>Daily Jobs: New Chore</h2>
+    <%= form_for(@chore) do |chore| %>
+    <%= chore.text_field :name, placeholder: 'Name' %>
+    <%= chore.text_area :description, placeholder: 'Description', class: 'materialize-textarea' %>
+    <%= chore.submit "Create New Chore", class: 'waves-effect waves-light btn' %>
+    <% end %>
+</div>
