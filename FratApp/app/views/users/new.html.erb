@@ -1,0 +1,23 @@
+<!-- Content -->
+<div class="container">
+    <h2>Create New User</h2>
+    <%= form_for(@user) do |f| %>
+        <div class="row">
+            <div class="col s6">
+                <%= f.text_field :first_name, placeholder: "First Name", class: 'input-field validate' %>
+            </div>
+            <div class="col s6">
+                <%= f.text_field :last_name, placeholder: "Last Name", class: 'input-field validate' %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <%= f.email_field :email, placeholder: "Email", class: 'input-field validate' %>
+            </div>
+            <div class="col s6">
+                <%= f.password_field :password, placeholder: "Password", class: 'input-field validate' %>
+            </div>
+        </div>
+        <%= f.submit "Sign Up", class: 'waves-effect waves-light btn' %>
+    <% end %>
+</div>
