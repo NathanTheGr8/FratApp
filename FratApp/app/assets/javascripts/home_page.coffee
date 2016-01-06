@@ -5,4 +5,5 @@
 $(document).ready ->
   $('.dropdown-button').dropdown()
   $('.scrollspy').scrollSpy()
+  $('.parallax').parallax()
   return
