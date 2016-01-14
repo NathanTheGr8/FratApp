@@ -9,7 +9,7 @@
 </section>
 
 <div class="parallax-container">
-     <div class="parallax"><img src="https://celectcdn.s3.amazonaws.com/images/0001/6455/DSCF1080.JPG"></div>
+     <div class="parallax"><%= image_tag 'house.jpg', class: 'responsive-img'%></div>
 </div>
 
 <div class="container"></div>
@@ -18,7 +18,7 @@
         <div class="container">
         <h2 class="center-align">Members</h2>
         <div class="row">
-            <div class="col s4">
+            <div class="col s12 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s12 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s12 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
@@ -54,7 +54,7 @@
         </div>
 
         <div class="row">
-            <div class="col s4">
+            <div class="col s12 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s12 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s12 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
@@ -89,7 +89,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col s4">
+            <div class="col s12 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
@@ -100,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s12 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
@@ -111,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s12 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
@@ -410,23 +410,25 @@
 <section id="contact" class="section scrollspy">
     <h2 class="center-align">Contact Information</h2>
     <div class="row">
-        <div class="col s6">
-            <div class="right">
+        <div class="col s12 l6 hide-on-small-only">
+            <div class="center">
                 <div class="overlay" onClick="style.pointerEvents='none'"></div>
                 <iframe width="480" height="360" frameborder="0" style="border:0"
 src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJT5exbTfXDIgRAypB-U3DFHk&key=AIzaSyC2NVCFUvMukppbQZ0eINcMQ1RDwoiPDZA" allowfullscreen></iframe>
             </div>
         </div>
-        <div class="col s6">
-            <h5>Mailing Address</h5>
-               <p>Triangle Fraternity</p>
-               <p>112 E Daniel St</p>
-               <p>Champaign, IL 61820</p>
-               <br/>
-               <h5>Email</h5>
-               <p><a href="mailto:triangle.uiuc.pres@gmail.com">triangle.uiuc.pres@gmail.com</a></p>
-               <br/>
-               <h5>Connect with Us on <a href="https://www.facebook.com/pages/Triangle-Fraternity-Illinois/124723071469">Facebook</a></h5>
+        <div class="col s12 l6">
+            <div class="center">
+                <h5>Mailing Address</h5>
+                   <p>Triangle Fraternity</p>
+                   <p>112 E Daniel St</p>
+                   <p>Champaign, IL 61820</p>
+                   <br/>
+                   <h5>Email</h5>
+                   <p><a href="mailto:triangle.uiuc.pres@gmail.com">triangle.uiuc.pres@gmail.com</a></p>
+                   <br/>
+                   <h5>Connect with Us on <a href="https://www.facebook.com/pages/Triangle-Fraternity-Illinois/124723071469">Facebook</a></h5>
+            </div>
         </div>
     </div>
 </section>
