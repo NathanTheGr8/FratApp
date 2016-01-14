@@ -8,9 +8,10 @@
     </div>
 </section>
 
-<div class="parallax-container">
+<div class="parallax-container hide-on-small-only">
      <div class="parallax"><%= image_tag 'house.jpg', class: 'responsive-img'%></div>
 </div>
+<%= image_tag "house.jpg", class:'responsive-img hide-on-med-and-up	' %>
 
 <div class="container"></div>
 
@@ -18,10 +19,10 @@
         <div class="container">
         <h2 class="center-align">Members</h2>
         <div class="row">
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
+                        <%= image_tag 'ian.jpg' %>
                         <span class="card-title">President</span>
                     </div>
                     <div class="card-content">
@@ -29,10 +30,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
+                        <%= image_tag 'george.jpg' %>
                         <span class="card-title">Vice President</span>
                     </div>
                     <div class="card-content">
@@ -40,10 +41,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
+                        <%= image_tag 'dolph.jpg' %>
                         <span class="card-title">External Director</span>
                     </div>
                     <div class="card-content">
@@ -54,10 +55,10 @@
         </div>
 
         <div class="row">
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
+                        <%= image_tag 'trevor.jpg' %>
                         <span class="card-title">Recruitment Director</span>
                     </div>
                     <div class="card-content">
@@ -65,10 +66,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
+                        <%= image_tag 'dolph.jpg' %>
                         <span class="card-title">Treasurer</span>
                     </div>
                     <div class="card-content">
@@ -76,10 +77,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
+                        <%= image_tag 'dolph.jpg' %>
                         <span class="card-title">House Manager</span>
                     </div>
                     <div class="card-content">
@@ -89,10 +90,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
+                        <%= image_tag 'dolph.jpg' %>
                         <span class="card-title">Social Chair</span>
                     </div>
                     <div class="card-content">
@@ -100,10 +101,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
+                        <%= image_tag 'dolph.jpg' %>
                         <span class="card-title">Secretary</span>
                     </div>
                     <div class="card-content">
@@ -111,10 +112,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="http://cdn.playbuzz.com/cdn/6f2fcb26-1d56-4e3d-bd79-bee29d3ad6d9/1367f51e-cb3a-4a78-8ae1-1534439b24df.jpg">
+                        <%= image_tag 'dolph.jpg' %>
                         <span class="card-title">Brother Search</span>
                     </div>
                     <div class="card-content">
@@ -136,7 +137,7 @@
     <h4 class="center-align">Week 1</h4>
     <div class="row">
         <div class="container">
-            <div class="col s12 l6">
+            <div class="col s12 m6">
                 <div class="rush-card">
                     <div class="card medium">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -157,7 +158,7 @@
                 </div>
             </div>
 
-            <div class="col s12 l6">
+            <div class="col s12 m6">
                 <div class="rush-card">
                     <div class="card medium">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -184,7 +185,7 @@
     <h4 class="center-align">Week 2</h4>
     <div class="row">
         <div class="container">
-            <div class="col s12 l6">
+            <div class="col s12 m6">
                 <div class="rush-card">
                     <div class="card medium">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -206,7 +207,7 @@
                 </div>
             </div>
 
-            <div class="col s12 l6">
+            <div class="col s12 m6">
                 <div class="rush-card">
                     <div class="card medium">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -224,9 +225,9 @@
 
     <!-- Row 3 (3 events instead of 2) -->
     <h4 class="center-align">Week 3</h4>
-    <div class="row">
-            <div class="container">
-            <div class="col s12 l4">
+    <div class="hide-on-small-only">
+        <div class="row">
+            <div class="col s12 m4">
                 <div class="rush-card">
                     <div class="card medium">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -248,7 +249,7 @@
                 </div>
             </div>
 
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="rush-card">
                     <div class="card medium">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -270,7 +271,7 @@
                 </div>
             </div>
 
-            <div class="col s12 l4">
+            <div class="col s12 m4">
                 <div class="rush-card">
                     <div class="card medium">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -294,11 +295,83 @@
         </div>
     </div>
 
+    <div class="hide-on-med-and-up">
+        <div class="row">
+            <div class="container">
+                <div class="col s12 m4">
+                    <div class="rush-card">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="https://i.ytimg.com/vi/cdM8G1i2mKc/maxresdefault.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Nerf Wars<i class="material-icons right">more_vert</i></span>
+                                <p>Nerf Wars throughout the house, Wednesday (2/3) @ 6pm</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Nerf Wars<i class="material-icons right">close</i></span>
+                                <ul>
+                                    <li class="card-list-item">We have a ton of Nerf Guns (and ammo too).</li>
+                                    <li class="card-list-item">There will be several rounds kinda like paintball or COD.</li>
+                                    <li class="card-list-item">Couches and tables will be used to create barriers and different playing fields.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="rush-card">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="http://i.imgur.com/gWoqTgx.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Picasso Pictionary<i class="material-icons right">more_vert</i></span>
+                                <p>Pictionary, Painting, and (Ph)inger paint is going to make for a great Friday night event, (2/5) @ 5pm</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Picasso Pictionary<i class="material-icons right">close</i></span>
+                                <ul>
+                                    <li class="card-list-item">This will be a new event that will blend a house favorite with a new focus. Get ready to enjoy a new form of art!</li>
+                                    <li class="card-list-item">Glow in the dark finger paint will be an option for drawing as teams will work together to win a finger painting tournament.</li>
+                                    <li class="card-list-item">The better your team does the better your team is supplied as the event rolls on.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="rush-card">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="http://i.dailymail.co.uk/i/pix/2014/02/03/article-2550749-1B294E1200000578-301_634x517.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title grey-text text-darken-4">Superbowl Smash</span>
+                                <p>Superbowl football party and Smash Bros tourney in one event, Sunday (2/7) @ 5pm</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Picasso Pictionary<i class="material-icons right">close</i></span>
+                                <ul>
+                                    <li class="card-list-item">This will be a new event that will blend a house favorite with a new focus. Get ready to enjoy a new form of art!</li>
+                                    <li class="card-list-item">Glow in the dark finger paint will be an option for drawing as teams will work together to win a finger painting tournament.</li>
+                                    <li class="card-list-item">The better your team does the better your team is supplied as the event rolls on.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Row 4 (back to 2 events)-->
     <h4 class="center-align">Week 4</h4>
     <div class="row">
         <div class="container">
-            <div class="col s12 l6">
+            <div class="col s12 m6">
                 <div class="rush-card">
                     <div class="card medium">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -312,7 +385,7 @@
                 </div>
             </div>
 
-            <div class="col s12 l6">
+            <div class="col s12 m6">
                 <div class="rush-card">
                     <div class="card medium">
                         <div class="card-image waves-effect waves-block waves-light">
